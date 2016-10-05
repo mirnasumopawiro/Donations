@@ -14,6 +14,7 @@
 // the donations in order from lowest to highest
 // and in the original order they were received.
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 // Function prototypes
@@ -24,6 +25,7 @@ void showArrPtr(int *[], int);
 int main()
 {
     const int NUM_DONATIONS = 15;
+    fstream outfile ("Donations.txt", fstream::out);
     
     // An array containing the donation amounts.
     int donations[NUM_DONATIONS] = { 5, 100, 5, 25, 10,
